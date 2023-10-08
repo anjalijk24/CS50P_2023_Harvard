@@ -1,2 +1,3 @@
-# CS50P_2023_Harvard
-My solutions to Harvard University's  CS50 Introduction to Programming with Python (CS50P 2022) #CS50
+# Harvard CS50: Introduction to Programming with Python
+My solutions to Harvard University's "CS50 Introduction to Programming with Python" course on edX. I used both CS50'S IDE and VS code on my macOS to carry out these assignments.
+

@@ -1,3 +1,9 @@
+#Assignment:implement a program that prompts the user for the name of a file and then outputs that file’s media type if the file’s name ends,
+#case-insensitively, in any of these suffixes: .gif, .jpg, .jpeg, .png, .pdf, .txt, .zip
+
+#If the file’s name ends with some other suffix or has no suffix at all, output application/octet-stream instead, which is a common
+#default
+
 filename = input("File name: ").strip().casefold()
 
 suffix = filename.rsplit('.', maxsplit=1)
@@ -11,9 +17,3 @@ elif filename.endswith("txt"):
 else:
     print("application/octet-stream")
 
-#NOTE:
-#I ran check50 which returned the following errors:
-#:( input of happy.jpg yields output of image/jpeg
-#:( input of zipper.jpg, with another extension name, yields output of image/jpeg
-#I don't know what's wrong here because I get the expected answers when I execute 'python extensions.py'
-#If someone is checking this assignment, it would be nice to get feedback

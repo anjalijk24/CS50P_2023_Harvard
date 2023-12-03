@@ -12,38 +12,45 @@
 
 import random
 
-LEVELS = {
-    1: (0, 9),
-    2: (10, 99),
-    3: (100, 999)
-}
 
 def main():
     # main function for the calculator
-    level = get_level("Level: ")
-    score = generate_integer(level)
+    level = get_level()
+    score = get_score(level)
     print(f"Score: {score}")
 
 
-def get_level(prompt):
-    #prompt the user to select a level between 1 & 3
-    while True:
-        try:
-            n = int(input(prompt))
-            if n in LEVELS:
-                return n
-        except ValueError:
-            pass         # Reprompt the user
+def get_level():
+   #prompt the user to select a level between 1 & 3
+   while True:
+       try:
+         n = int(input("Level: "))
+         if 1 <= n <= 3:
+            return n
+       except ValueError:
+            pass
 
 
-def generate_integer(l):
-    lower_limit, upper_limit = LEVELS[l]
+def generate_integer(level):
+    if level == 1:
+        lower_limit, upper_limit = 0, 9
+    elif level == 2:
+        lower_limit, upper_limit = 10, 99
+    elif level == 3:
+        lower_limit, upper_limit = 100, 999
+    else:
+        raise ValueError
+
+    return random.randint(lower_limit, upper_limit)
+
+
+
+def get_score(l):
     score = 0
-
     for _ in range(10):
-        x = random.randint(lower_limit, upper_limit)
-        y = random.randint(lower_limit, upper_limit)
-        count = 0
+        x = generate_integer(l)
+        y = generate_integer(l)
+        count  = 0
 
         while count < 3:
             result = input(f"{x} + {y} = ")

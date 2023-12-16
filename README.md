@@ -27,7 +27,7 @@ The coursework comprises ten modules, each with its corresponding problem set (P
 ## Folder Structure
 
 - Each module has its own dedicated folder containing the relevant problem set solutions.
-- The final project solution is located in the "Et Cetera" folder.
+- The final project solution is located in the "project" folder.
 
 ## Explore the Code
 

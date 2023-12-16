@@ -6,16 +6,18 @@ This repository contains my solutions to Harvard University's "CS50 Introduction
 
 The coursework comprises ten modules, each with its corresponding problem set (PS):
 
-0. **Functions, Variables** - PS0
-1. **Conditionals** - PS1
-2. **Loops** - PS2
-3. **Exceptions** - PS3
-4. **Libraries** - PS4
-5. **Unit Tests** - PS5
-6. **File I/O** - PS6
-7. **Regular Expressions** - PS7
-8. **Object-Oriented Programming** - PS8
-9. **Et Cetera** - Project (Final Assignment)
+| Module Name                       | Problem Set     |
+| --------------------------------- | --------------- |
+| Functions, Variables              | PS0             |
+| Conditionals                      | PS1             |
+| Loops                             | PS2             |
+| Exceptions                        | PS3             |
+| Libraries                         | PS4             |
+| Unit Tests                        | PS5             |
+| File I/O                          | PS6             |
+| Regular Expressions               | PS7             |
+| Object-Oriented Programming       | PS8             |
+| Et Cetera                         | Project         |
 
 ## Tools Used
 

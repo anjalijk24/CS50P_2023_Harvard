@@ -56,8 +56,6 @@ The script performs the following steps:
   - Utilizes the tabulate library to present the information in a clear and organized table.
   - Displays relevant details such as company name, symbol, closing price, and various technical indicators.
 
-This comprehensive analysis provides insights into the performance of top companies based on a combination of fundamental and technical factors.
-
 ## Notes
 
 - **Data Sensitivity:**

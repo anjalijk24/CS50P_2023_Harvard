@@ -67,7 +67,7 @@ The script performs the following steps:
 
 ## Disclaimer
 
-This script is for educational and informational purposes only. It does not constitute financial advice. The analysis and results obtained from the script are based on historical data and algorithmic calculations, which may not accurately predict future market conditions.
+This script was developed as part of the CS50P course and is for educational purposes only. It does not constitute financial advice.  The analysis and results obtained from the script are based on historical data and algorithmic calculations, which may not accurately predict future market conditions.
 
 Always do your own research and consult with a qualified financial professional before making any investment decisions. The author of this script is not responsible for any financial losses or gains that may result from the use of this script. Use it at your own risk.
 

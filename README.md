@@ -27,7 +27,8 @@ The coursework comprises ten modules, each with its corresponding problem set (P
 ## Folder Structure
 
 - Each module has its own dedicated folder containing the relevant problem set solutions.
-- The final project solution is located in the "project" folder.
+- The final project solution is located in the "project" folder
+  The project.py carries out a quick analysis on top companies listed on the Bombay Stock Exchange (BSE), India. Developed as part of the course, the script fetches real-time data, applies basic technical indicators, and provides a snapshot of stock performance. A beginner-friendly tool for exploring stock data.
 
 ## Explore the Code
 

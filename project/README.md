@@ -39,7 +39,6 @@ To execute the stock analysis script, open your terminal or command prompt and n
 python project.py
 
 ## Script Explanation
-
 The script performs the following steps:
 
 - **Fetches the list of top companies from the BSE website using web scraping techniques.**

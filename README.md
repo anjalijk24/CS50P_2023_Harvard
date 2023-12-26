@@ -17,7 +17,7 @@ The coursework comprises ten modules, each with its corresponding problem set (P
 | File I/O                          | PS6             |
 | Regular Expressions               | PS7             |
 | Object-Oriented Programming       | PS8             |
-| Et Cetera                         | Project         |
+| Et Cetera                         | project         |
 
 ## Tools Used
 

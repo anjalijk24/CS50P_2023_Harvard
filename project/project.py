@@ -12,11 +12,11 @@ from tabulate import tabulate
 BSE_URL = "https://www.bseindia.com/markets/equity/EQReports/TopMarketCapitalization.aspx"
 ALPHA_VANTAGE_URL = 'https://www.alphavantage.co/query?'
 # use your Alpha Vantage API key here; sign up for a free API key: https://www.alphavantage.co/support/#api-key
-ALPHA_VANTAGE_KEY = 'X2187U7FG6Y809IZ'
+ALPHA_VANTAGE_KEY = 'YOUR_KEY_HERE'
 # Retrieve your user agent from https://www.whatismybrowser.com/. Use the user agent and include a header
 # declaration in your Python script for web scraping. This helps prevent your activity from being classified
 # as spam and potentially blacklisted by the target website.
-USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0'
+USER_AGENT = 'YOUR_USER_AGENT_INFO_HERE'
 
 
 

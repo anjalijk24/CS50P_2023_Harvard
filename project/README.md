@@ -33,12 +33,11 @@ Additionally, provide your user agent for web scraping. You can find your user a
 
 2. Run the Script
 
-To execute the stock analysis script, open your terminal or command prompt and navigate to the directory where the script (`project.py`) is located. Then, run the following command:
-
-```bash
+To execute the stock analysis script, open your terminal or command prompt and navigate to the directory where the script (`project.py`) is located. Then, run the following command: ```bash
 python project.py
 
 ## Script Explanation
+
 The script performs the following steps:
 
 - **Fetches the list of top companies from the BSE website using web scraping techniques.**

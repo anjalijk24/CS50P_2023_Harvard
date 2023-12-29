@@ -1,5 +1,3 @@
-
-
 import re
 import requests
 import pandas as pd
@@ -21,7 +19,7 @@ ALPHA_VANTAGE_KEY = 'YOUR_API_KEY'
 # Retrieve your user agent from https://www.whatismybrowser.com/
 # Including a header declaration in your Python script helps prevent your activity from being classified as spam
 # and potentially blacklisted by the target website.
-USER_AGENT = 'YOUR_USER_AGENT_INFO'
+USER_AGENT = 'YOUR_USER_AGENT'
 
 
 # Function to fetch BSE100 companies name and symbol from the BSE site
@@ -44,7 +42,7 @@ def fetch_bse_top_companies_list(url, user_agent):
         Example usage of the function:
 
         >>> url = "https://example.com/bse100"
-        >>> user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+        >>> user_agent = "YOUR_USER_AGENT"
         >>> companies_info = fetch_bse_top_companies_list(url, user_agent)
     """
 
@@ -109,7 +107,7 @@ def fetch_time_series(url, symbol, api_key):
     Example:
         Example usage of the function:
 
-        >>> url = "https://www.alphavantage.co/query"
+        >>> url = "https://www.alphavantage.co/query?"
         >>> symbol = "AAPL"
         >>> api_key = "your_api_key"
         >>> # Fetch daily time series data for Apple (AAPL) using Alpha Vantage API
@@ -135,17 +133,14 @@ def fetch_time_series(url, symbol, api_key):
 
         return df
 
-    except requests.exceptions.HTTPError as e:
+    except requests.exceptions.HTTPError:
         # Handle HTTP errors by raising an exception with details
-        raise e
+        raise
 
     except KeyError:
         # Raise an exception if the expected time series data is not present in the response
-        raise KeyError("Time series data not found in the API response.")
+        raise KeyError("Time series data not found in the API response")
 
-    except ValueError as e:
-        # Raise an exception if the time series data cannot be converted to a DataFrame
-        raise ValueError(f"Error converting time series data to DataFrame: {e}")
 
 
 # Function to fetch RSI data from Alpha Vantage
@@ -203,17 +198,14 @@ def fetch_rsi(url, symbol, api_key, time_period, series_type='close'):
         current_rsi = df.iloc[0]['RSI']
         return current_rsi
 
-    except requests.exceptions.HTTPError as e:
+    except requests.exceptions.HTTPError:
         # Handle HTTP errors by raising an exception with details
-        raise e
+        raise
 
     except KeyError:
         # Raise an exception if the expected RSI data is not present in the response
         raise KeyError("RSI data not found in the API response.")
 
-    except ValueError as e:
-        # Raise an exception if the RSI data cannot be converted to a DataFrame
-        raise ValueError(f"Error converting RSI data to DataFrame: {e}")
 
 
 
@@ -265,8 +257,8 @@ def main():
     # Initialize a list to store information about top companies
     top_companies = []
 
-    # Loop through the first 10 companies in the BSE100 list
-    for company in companies_info[:10]:
+    # Loop through the first 12 companies in the BSE100 list
+    for company in companies_info[:12]:
         symbol = f"{company['symbol']}.BSE"
 
         # Fetch time series data for the company from Alpha Vantage
@@ -316,7 +308,7 @@ def main():
     # Select the top 5 companies
     top5_companies = top_companies[:5]
 
-    # Print information of the top 5 companies from the first 10 companies on the BSE100 list
+    # Print information of the top 5 companies from the first 12 companies on the BSE100 list
     print(tabulate(top5_companies, headers='keys'))
 
 

@@ -1,9 +1,8 @@
 # BSE Top Companies Analysis
-#### Video Demo:
 
 ## Overview
 
-This Python script performs analysis on the top companies listed on the Bombay Stock Exchange (BSE), utilizing data from the Alpha Vantage API. It fetches company information, calculates various financial indicators, and identifies the top 5 companies based on specific criteria.
+This Python script performs analysis on the top companies listed on the Bombay Stock Exchange (BSE), utilizing data from the Alpha Vantage API. It fetches company information, calculates various financial indicators, and identifies the top 5 companies based on specific criteria. This is a beginner's attempt to pick five stocks from the BSE100's top 12 companies using three key technical indicators: EMA, RSI, and MACD.
 
 ## Prerequisites
 
@@ -24,7 +23,7 @@ Before running the script, ensure you have the following prerequisites:
     Replace 'YOUR_API_KEY' with your Alpha Vantage API key.
     Replace 'YOUR_USER_AGENT_INFO' with your user agent information.
 
-### Script Structure
+## Script Structure
 
 #### Constants
 
@@ -115,8 +114,19 @@ These constants define essential URLs and keys required for fetching data from t
    - **Description:**
      Main function to fetch BSE top companies, analyze their indicators, and print the top 5 companies.
 
+## Limitations
 
-### Disclaimer
+- Due to the constraints of a free Alpha Vantage account, allowing only 25 free function calls per day, and the script's structure, which entails two calls for each stock (one for fetching the time series using fetch_time_series() and another for obtaining the RSI via fetch_rsi()), the script can only iterate through 12 stocks.
+
+- The BSE100 list is determined by the market capitalization of stocks. Therefore, by selecting the first 12 stocks, I will be focusing solely on the top companies. Consideration might be given to randomly choosing 12 companies from the BSE100 list for a more diverse sampling approach.
+
+## Future Work
+
+- I intend to incorporate a code snippet for calculating the Relative Strength Index (RSI) or explore existing libraries that offer RSI values, eliminating the reliance on Alpha Vantage function calls. This would enable me to iterate through 25 stocks on the BSE100 list.
+
+- Additionally, I plan to investigate alternative platforms, apart from Alpha Vantage, for obtaining time series data on stocks that do not impose a daily limitation.
+
+## Disclaimer
 
 This script is provided for educational and informational purposes only. By using this script, you agree to:
 
